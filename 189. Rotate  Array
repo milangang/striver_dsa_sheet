@@ -1,0 +1,28 @@
+brute force approah :-
+T=O(n)
+S=O(n)
+
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int i=0;
+        int n=nums.length;
+        int temp[]=new int[nums.length];
+        while(i<n)
+        {
+            temp[(i+k)%n]=nums[i];
+            i++;
+        }
+        
+        for(i=0;i<n;i++)
+        {
+            nums[i]=temp[i];
+        }
+    }
+}
+
+
+optimal approach:-
+T=O(n)
+S=O(1)
+
+https://leetcode.com/problems/rotate-array/solutions/1730142/java-c-python-a-very-very-well-detailed-explanation
